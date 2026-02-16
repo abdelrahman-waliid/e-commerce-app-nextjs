@@ -28,11 +28,7 @@ export default async function BrandDetails({params} : {params:Params}) {
 
   return <>
 
-  {productsData.results == 0 ?   <div className='container mx-auto px-4 py-8'>
-     {brandData.data.map((brand)=> <div className="mb-8">
-      <h1 className='text-3xl font-bold mb-2'> {brand.name} </h1>
-      <p className='text-muted-foreground'>Products in this category</p>
-    </div> )}
+  {productsData.results == 0 ?   <div className='container mx-auto px-4 py-8'> 
     <div className='text-center py-12'>
       <p className='text-muted-foreground text-lg'>No products found in this category.</p>
     </div>

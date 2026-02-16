@@ -21,14 +21,12 @@ export default async function CategoriesDetails({params} : {params:Params}) {
  const productsResponse = await fetch(`https://ecommerce.routemisr.com/api/v1/products?category[in]=${categoryId}`)
  const productsData:ProductsResponse = await productsResponse.json()
  
+  console.log(categoryData);
   
   return  <>
 
   {productsData.results == 0 ?   <div className='container mx-auto px-4 py-8'>
-    {categoryData.data.map((brand)=> <div className="mb-8">
-      <h1 className='text-3xl font-bold mb-2'> {brand.name} </h1>
-      <p className='text-muted-foreground'>Products in this category</p>
-    </div> )}
+      
     <div className='text-center py-12'>
       <p className='text-muted-foreground text-lg'>No products found in this category.</p>
     </div>
